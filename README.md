@@ -4,14 +4,11 @@ This is an application to detect emotions from Tom and Jerry videos.
 
 ## Installation using docker
 
-You can build the docker image and run it like:
+You can build the docker image and run it using docker-compose:
 ```bash
-docker build -t surajsubramanian/emotiondetection .
-
-docker run -v $(pwd)/tests/inputs/input.mp4:/app/tests/inputs/input.mp4 -v /app/yolo_predictor -v $(pwd):/app --name emotiondetection-container surajsubramanian/emotiondetection
+docker-compose up
 ```
-
-or use docker-compose like `docker-compose up`. You can also use `docker-compose up --no-build` if you already have the image.
+The input and output video paths can be configured in `docker-compose.yaml`
 
 ## Usage
 
